@@ -1,13 +1,8 @@
---[=[
- d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
-88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
-88      88    88    88            odD'      88      88    88 88ooo88 
-88  ooo 88    88    88          .88'        88      88    88 88~~~88 
-88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
- Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
-]=]
+-- Created with GUI to Lua by uniqadev on Roblox. Credits to Robloxfan45220 for crating the main base of ROHub!
 
--- Instances: 22 | Scripts: 7 | Modules: 0 | Tags: 0
+--ROHub
+
+-- GUI TO LUA
 local G2L = {};
 
 -- StarterGui.ROHub
@@ -127,62 +122,168 @@ G2L["e"] = Instance.new("UICorner", G2L["8"]);
 G2L["e"]["Name"] = [[MainCorner]];
 
 
--- StarterGui.ROHub.ROHubLabel.Main.NoclipGUIButton
+-- StarterGui.ROHub.ROHubLabel.Main.TouchFlingGUIButton
 G2L["f"] = Instance.new("TextButton", G2L["8"]);
 G2L["f"]["BorderSizePixel"] = 0;
-G2L["f"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["f"]["TextSize"] = 14;
-G2L["f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["f"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["f"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["f"]["Name"] = [[NoclipGUIButton]];
+G2L["f"]["Size"] = UDim2.new(0, 68, 0, 30);
+G2L["f"]["Name"] = [[TouchFlingGUIButton]];
 G2L["f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["f"]["Text"] = [[Touch Fling]];
+G2L["f"]["Rotation"] = -90;
+G2L["f"]["Position"] = UDim2.new(-0.04583, 0, 0.53886, 0);
 
 
--- StarterGui.ROHub.ROHubLabel.Main.NoclipGUIButton.NoclipButtonCorner
+-- StarterGui.ROHub.ROHubLabel.Main.TouchFlingGUIButton.TouchFlingCorner
 G2L["10"] = Instance.new("UICorner", G2L["f"]);
-G2L["10"]["Name"] = [[NoclipButtonCorner]];
+G2L["10"]["Name"] = [[TouchFlingCorner]];
 
 
--- StarterGui.ROHub.ROHubLabel.Main.NoclipGUIButton.LocalScript
+-- StarterGui.ROHub.ROHubLabel.Main.TouchFlingGUIButton.TouchFlingScript
 G2L["11"] = Instance.new("LocalScript", G2L["f"]);
+G2L["11"]["Name"] = [[TouchFlingScript]];
 
+
+-- StarterGui.ROHub.ROHubLabel.GUIDeleteButton
+G2L["12"] = Instance.new("TextButton", G2L["2"]);
+G2L["12"]["BorderSizePixel"] = 0;
+G2L["12"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["12"]["TextSize"] = 14;
+G2L["12"]["BackgroundColor3"] = Color3.fromRGB(95, 0, 3);
+G2L["12"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["12"]["Size"] = UDim2.new(0, 38, 0, 23);
+G2L["12"]["Name"] = [[GUIDeleteButton]];
+G2L["12"]["BorderColor3"] = Color3.fromRGB(255, 0, 5);
+G2L["12"]["Text"] = [[Close]];
+G2L["12"]["Position"] = UDim2.new(1.10976, 0, 0, 0);
+
+
+-- StarterGui.ROHub.ROHubLabel.GUIDeleteButton.GUIActivator1
+G2L["13"] = Instance.new("LocalScript", G2L["12"]);
+G2L["13"]["Name"] = [[GUIActivator1]];
+
+
+-- StarterGui.ROHub.ROHubLabel.GUIDeleteButton.thryjuk
+G2L["14"] = Instance.new("UICorner", G2L["12"]);
+G2L["14"]["Name"] = [[thryjuk]];
 
 
 -- StarterGui.ROHub.OpenGUIButton
-G2L["12"] = Instance.new("TextButton", G2L["1"]);
-G2L["12"]["BorderSizePixel"] = 0;
-G2L["12"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["12"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["12"]["TextSize"] = 14;
-G2L["12"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["12"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["12"]["Size"] = UDim2.new(0, 81, 0, 24);
-G2L["12"]["Name"] = [[OpenGUIButton]];
-G2L["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["12"]["Text"] = [[	Open ROHub]];
-G2L["12"]["Visible"] = false;
-G2L["12"]["Position"] = UDim2.new(-0.08815, 1091, 1.16866, -842);
+G2L["15"] = Instance.new("TextButton", G2L["1"]);
+G2L["15"]["BorderSizePixel"] = 0;
+G2L["15"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["15"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["15"]["TextSize"] = 14;
+G2L["15"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["15"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["15"]["Size"] = UDim2.new(0, 81, 0, 24);
+G2L["15"]["Name"] = [[OpenGUIButton]];
+G2L["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["15"]["Text"] = [[	Open ROHub]];
+G2L["15"]["Visible"] = false;
+G2L["15"]["Position"] = UDim2.new(-0.08815, 1091, 1.16866, -842);
 
 
 -- StarterGui.ROHub.OpenGUIButton.OpenCorner
-G2L["13"] = Instance.new("UICorner", G2L["12"]);
-G2L["13"]["Name"] = [[OpenCorner]];
+G2L["16"] = Instance.new("UICorner", G2L["15"]);
+G2L["16"]["Name"] = [[OpenCorner]];
 
 
 -- StarterGui.ROHub.OpenGUIButton.OpenGUIScript
-G2L["14"] = Instance.new("LocalScript", G2L["12"]);
-G2L["14"]["Name"] = [[OpenGUIScript]];
+G2L["17"] = Instance.new("LocalScript", G2L["15"]);
+G2L["17"]["Name"] = [[OpenGUIScript]];
 
 
 -- StarterGui.ROHub.OpenGUIButton.DraggableGUIScript1
-G2L["15"] = Instance.new("LocalScript", G2L["12"]);
-G2L["15"]["Name"] = [[DraggableGUIScript1]];
+G2L["18"] = Instance.new("LocalScript", G2L["15"]);
+G2L["18"]["Name"] = [[DraggableGUIScript1]];
 
 
 -- StarterGui.ROHub.Settings
-G2L["16"] = Instance.new("LocalScript", G2L["1"]);
-G2L["16"]["Name"] = [[Settings]];
+G2L["19"] = Instance.new("LocalScript", G2L["1"]);
+G2L["19"]["Name"] = [[Settings]];
+
+
+-- StarterGui.ROHub.GUIDeleteConf
+G2L["1a"] = Instance.new("Frame", G2L["1"]);
+G2L["1a"]["Visible"] = false;
+G2L["1a"]["BorderSizePixel"] = 0;
+G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1a"]["Size"] = UDim2.new(0, 184, 0, 141);
+G2L["1a"]["Position"] = UDim2.new(0.46763, 0, 0.4579, 0);
+G2L["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1a"]["Name"] = [[GUIDeleteConf]];
+
+
+-- StarterGui.ROHub.GUIDeleteConf.bnh
+G2L["1b"] = Instance.new("UICorner", G2L["1a"]);
+G2L["1b"]["Name"] = [[bnh]];
+
+
+-- StarterGui.ROHub.GUIDeleteConf.GUIDelY
+G2L["1c"] = Instance.new("TextButton", G2L["1a"]);
+G2L["1c"]["BorderSizePixel"] = 0;
+G2L["1c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1c"]["TextSize"] = 14;
+G2L["1c"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1c"]["Size"] = UDim2.new(0, 51, 0, 32);
+G2L["1c"]["Name"] = [[GUIDelY]];
+G2L["1c"]["BorderColor3"] = Color3.fromRGB(0, 255, 0);
+G2L["1c"]["Text"] = [[Yes]];
+G2L["1c"]["Position"] = UDim2.new(0.04348, 0, 0.68794, 0);
+
+
+-- StarterGui.ROHub.GUIDeleteConf.GUIDelY.htjy
+G2L["1d"] = Instance.new("UICorner", G2L["1c"]);
+G2L["1d"]["Name"] = [[htjy]];
+
+
+-- StarterGui.ROHub.GUIDeleteConf.GUIDelY.YGUIDel
+G2L["1e"] = Instance.new("LocalScript", G2L["1c"]);
+G2L["1e"]["Name"] = [[YGUIDel]];
+
+
+-- StarterGui.ROHub.GUIDeleteConf.GUIDelN
+G2L["1f"] = Instance.new("TextButton", G2L["1a"]);
+G2L["1f"]["BorderSizePixel"] = 0;
+G2L["1f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1f"]["TextSize"] = 14;
+G2L["1f"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1f"]["Size"] = UDim2.new(0, 44, 0, 32);
+G2L["1f"]["Name"] = [[GUIDelN]];
+G2L["1f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1f"]["Text"] = [[No]];
+G2L["1f"]["Position"] = UDim2.new(0.67391, 0, 0.68794, 0);
+
+
+-- StarterGui.ROHub.GUIDeleteConf.GUIDelN.hyjtuk
+G2L["20"] = Instance.new("UICorner", G2L["1f"]);
+G2L["20"]["Name"] = [[hyjtuk]];
+
+
+-- StarterGui.ROHub.GUIDeleteConf.GUIDelN.NoGUIDelScript
+G2L["21"] = Instance.new("LocalScript", G2L["1f"]);
+G2L["21"]["Name"] = [[NoGUIDelScript]];
+
+
+-- StarterGui.ROHub.GUIDeleteConf.InfoDelete
+G2L["22"] = Instance.new("TextLabel", G2L["1a"]);
+G2L["22"]["TextWrapped"] = true;
+G2L["22"]["BorderSizePixel"] = 0;
+G2L["22"]["TextSize"] = 14;
+G2L["22"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["22"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["22"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["22"]["Size"] = UDim2.new(0, 149, 0, 73);
+G2L["22"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["22"]["Text"] = [[Are you sure? If you click 'Yes', this will completely delete the GUI, so you have to run the script again to get ROHub back.]];
+G2L["22"]["Name"] = [[InfoDelete]];
+G2L["22"]["Position"] = UDim2.new(0.10326, 0, 0.07801, 0);
 
 
 -- StarterGui.ROHub.ROHubLabel.DraggableGUIScript
@@ -778,59 +879,159 @@ local script = G2L["c"];
 	
 end;
 task.spawn(C_c);
--- StarterGui.ROHub.ROHubLabel.Main.NoclipGUIButton.LocalScript
+-- StarterGui.ROHub.ROHubLabel.Main.TouchFlingGUIButton.TouchFlingScript
 local function C_11()
 local script = G2L["11"];
 	local Button = script.Parent
 	
 	Button.MouseButton1Click:Connect(function()
-		getgenv().Players = game:GetService'Players'
-		getgenv().Host = Players.LocalPlayer
-		getgenv().AddNotification = function(title, text) game:GetService'StarterGui':SetCore("SendNotification", {Title = title; Text = text;}) end
-		getgenv().RunService = game:GetService'RunService';
-		getgenv().ContextActionService = game:GetService'ContextActionService';
 	
-		local Noclip = false;
-		local NoclipKey = 'X'; -- Change your key here
+	-- skiddos
+	-- Instances:
 	
-		RunService.RenderStepped:Connect(function()
-			if Noclip then
-				for _,v in pairs(Host.Character:GetDescendants()) do
-					if v:IsA'BasePart' and v.CanCollide then
-						v.CanCollide = false
+	local ScreenGui = Instance.new("ScreenGui")
+	local Frame = Instance.new("Frame")
+	local TextButton = Instance.new("TextButton")
+	local TextLabel = Instance.new("TextLabel")
+	local UICorner = Instance.new("UICorner")
+	local CloseButton = Instance.new("TextButton")
+	--Properties:
+	
+	ScreenGui.Parent = script.Parent.Parent.Parent.Parent
+	ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	ScreenGui.ResetOnSpawn = false
+	
+	Frame.Parent = ScreenGui
+	Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	Frame.BorderColor3 = Color3.fromRGB(255, 255, 255)
+	Frame.BorderSizePixel = 2
+	Frame.Position = UDim2.new(0.341826946, 0, 0.367763907, 0)
+	Frame.Size = UDim2.new(0, 148, 0, 106)
+	
+	TextButton.Parent = Frame
+	TextButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	TextButton.BorderColor3 = Color3.fromRGB(255, 255, 255)
+	TextButton.BorderSizePixel = 2
+	TextButton.Position = UDim2.new(0.0835492909, 0, 0.552504063, 0)
+	TextButton.Size = UDim2.new(0, 124, 0, 37)
+	TextButton.Font = Enum.Font.SourceSans
+	TextButton.Text = "OFF"
+	TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+	TextButton.TextSize = 41.000
+	
+	TextLabel.Parent = Frame
+	TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabel.BackgroundTransparency = 1.000
+	TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	TextLabel.BorderSizePixel = 0
+	TextLabel.Position = UDim2.new(0.0649713054, 0, 0.0727680102, 0)
+	TextLabel.Size = UDim2.new(0, 128, 0, 39)
+	TextLabel.Font = Enum.Font.SourceSans
+	TextLabel.Text = "Touch Fling"
+	TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabel.TextSize = 34.000
+	
+	UICorner.Parent = Frame
+	
+	CloseButton.Parent = Frame
+	CloseButton.Name = "CloseButton"
+	CloseButton.Text = "Close"
+	CloseButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+	CloseButton.Position = UDim2.new(0, 20, 0, 5)
+	CloseButton.MouseButton1Click:Connect(function()
+		ScreenGui:Destroy()
+	end)
+	
+	-- Scripts:
+	
+	local function CTIKC_fake_script() -- TextButton.LocalScript 
+		local script = Instance.new('LocalScript', TextButton)
+	
+		local ReplicatedStorage = game:GetService("ReplicatedStorage")
+		local RunService = game:GetService("RunService")
+		local Players = game:GetService("Players")
+	
+		local toggleButton = script.Parent
+		local hiddenfling = false
+	
+	
+		if not ReplicatedStorage:FindFirstChild("juisdfj0i32i0eidsuf0iok") then
+			local detection = Instance.new("Decal")
+			detection.Name = "juisdfj0i32i0eidsuf0iok"
+			detection.Parent = ReplicatedStorage
+		end
+	
+		local function fling()
+			local hrp, c, vel, movel = nil, nil, nil, 0.1
+			local lp = Players.LocalPlayer
+	
+			while true do
+				RunService.Heartbeat:Wait()
+				if hiddenfling then
+					while hiddenfling and not (c and c.Parent and hrp and hrp.Parent) do
+						RunService.Heartbeat:Wait()
+						c = lp.Character
+						hrp = c and c:FindFirstChild("HumanoidRootPart")
 					end
-				end
-			else
-				for _,v in pairs(Host.Character:GetDescendants()) do
-					if v:IsA'BasePart' and not v.CanCollide then
-						v.CanCollide = true
-					end
-				end
-			end
-		end)
 	
-		function Noclipping(ActionName:string, Properties:EnumItem)
-			if ActionName == 'Noclip' then
-				if not Properties or Properties == Enum.UserInputState.Begin then
-					Noclip = not Noclip
-					AddNotification('ROHub','Noclip status:'..tostring(Noclip))
+					if hiddenfling then
+						vel = hrp.Velocity
+						hrp.Velocity = vel * 100000000000000 + Vector3.new(0, 100000000000000, 0)
+						RunService.RenderStepped:Wait()
+						if c and c.Parent and hrp and hrp.Parent then
+							hrp.Velocity = vel
+						end
+						RunService.Stepped:Wait()
+						if c and c.Parent and hrp and hrp.Parent then
+							hrp.Velocity = vel + Vector3.new(0, movel, 0)
+							movel = movel * -1
+						end
+					end
 				end
 			end
 		end
 	
-		ContextActionService:BindAction('Noclip', Noclipping, true, Enum.KeyCode[NoclipKey])
-		
-		game:GetService("StarterGui"):SetCore("SendNotification",{
-			Title = "ROHub", -- Required
-			Text = "Noclip started, X to disable. Once disabled press X again to enable.", -- Required
-		})
-		
+		toggleButton.MouseButton1Click:Connect(function()
+			hiddenfling = not hiddenfling
+			if hiddenfling then
+				toggleButton.Text = "ON"
+			else
+				toggleButton.Text = "OFF"
+			end
+		end)
+	
+		fling()
+	
+	end
+	coroutine.wrap(CTIKC_fake_script)()
+	local function FFJFK_fake_script() -- Frame.LocalScript 
+		local script = Instance.new('LocalScript', Frame)
+	
+		script.Parent.Active = true
+		script.Parent.Draggable = true
+	end
+	coroutine.wrap(FFJFK_fake_script)()
+	
 	end)
 end;
 task.spawn(C_11);
+-- StarterGui.ROHub.ROHubLabel.GUIDeleteButton.GUIActivator1
+local function C_13()
+local script = G2L["13"];
+	local Button = script.Parent
+	local GUIDelConf = script.Parent.Parent.Parent.GUIDeleteConf
+	local Board = script.Parent.Parent.Parent.ROHubLabel
+	
+	Button.MouseButton1Click:Connect(function()
+		GUIDelConf.Visible = true
+		Board.Visible = false
+	end)
+end;
+task.spawn(C_13);
 -- StarterGui.ROHub.OpenGUIButton.OpenGUIScript
-local function C_14()
-local script = G2L["14"];
+local function C_17()
+local script = G2L["17"];
 	local OpenGUIButton = script.Parent
 	local ROHubMain = script.Parent.Parent.ROHubLabel
 	
@@ -840,10 +1041,10 @@ local script = G2L["14"];
 	end)
 	
 end;
-task.spawn(C_14);
+task.spawn(C_17);
 -- StarterGui.ROHub.OpenGUIButton.DraggableGUIScript1
-local function C_15()
-local script = G2L["15"];
+local function C_18()
+local script = G2L["18"];
 	local UserInputService = game:GetService("UserInputService")
 	
 	local gui = script.Parent
@@ -886,13 +1087,64 @@ local script = G2L["15"];
 		end
 	end)
 end;
-task.spawn(C_15);
+task.spawn(C_18);
 -- StarterGui.ROHub.Settings
-local function C_16()
-local script = G2L["16"];
+local function C_19()
+local script = G2L["19"];
 	script.Parent.ResetOnSpawn = false
 	
+	-- Exploit Workspace File Support
+	
+	local CustomFunctionSupport = isfile and isfolder and writefile and readfile and listfiles
+	local FileSupport = isfile and isfolder and writefile and readfile
+	
+	if FileSupport then
+		if not isfolder('ROHub') then
+			makefolder('ROHub')
+		end
+		
+		if not isfolder ("ROHub/Settings")
+			makefolder('ROHub/Settings")
+	end
+	
+	if not isfile("ROHub/Settings/Information.txt") then
+		writefile("ROHub/Settings/Information.txt", 'Welcome to ROHub. The folder setting and read creation is WIP.')
+	else
+	end
+	end
 end;
-task.spawn(C_16);
+task.spawn(C_19);
+-- StarterGui.ROHub.GUIDeleteConf.GUIDelY.YGUIDel
+local function C_1e()
+local script = G2L["1e"];
+	local GUIDelConf = script.Parent.Parent
+	local Button = script.Parent
+	local Board = script.Parent.Parent.Parent.ROHubLabel
+	local ROHub = script.Parent.Parent.Parent
+	
+	Button.MouseButton1Click:Connect(function()
+		GUIDelConf.Visible = false
+		Board.Visible = false
+		ROHub:Destroy()
+	end)
+	
+	
+end;
+task.spawn(C_1e);
+-- StarterGui.ROHub.GUIDeleteConf.GUIDelN.NoGUIDelScript
+local function C_21()
+local script = G2L["21"];
+	local GUIDelConf = script.Parent.Parent
+	local Button = script.Parent
+	local Board = script.Parent.Parent.Parent.ROHubLabel
+	
+	Button.MouseButton1Click:Connect(function()
+		GUIDelConf.Visible = false
+		Board.Visible = true
+	end)
+	
+	
+end;
+task.spawn(C_21);
 
 return G2L["1"], require;
