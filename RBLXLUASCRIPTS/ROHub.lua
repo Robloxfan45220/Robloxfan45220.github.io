@@ -1,223 +1,299 @@
--- Gui to Lua
--- Version: 3.2
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+]=]
 
--- Instances:
+-- Instances: 34 | Scripts: 10 | Modules: 0 | Tags: 0
+local G2L = {};
 
-local ROHub = Instance.new("ScreenGui")
-local ROHubLabel = Instance.new("TextLabel")
-local ROHubLabelCorner = Instance.new("UICorner")
-local CloseButton = Instance.new("TextButton")
-local CloseCorner = Instance.new("UICorner")
-local Main = Instance.new("Frame")
-local WIP = Instance.new("TextLabel")
-local FlyGUIButton = Instance.new("TextButton")
-local FlyButtonCorner = Instance.new("UICorner")
-local MainGradient = Instance.new("UIGradient")
-local MainCorner = Instance.new("UICorner")
-local TouchFlingGUIButton = Instance.new("TextButton")
-local TouchFlingCorner = Instance.new("UICorner")
-local GUIDeleteButton = Instance.new("TextButton")
-local thryjuk = Instance.new("UICorner")
-local OpenGUIButton = Instance.new("TextButton")
-local OpenCorner = Instance.new("UICorner")
-local GUIDeleteConf = Instance.new("Frame")
-local bnh = Instance.new("UICorner")
-local GUIDelY = Instance.new("TextButton")
-local htjy = Instance.new("UICorner")
-local GUIDelN = Instance.new("TextButton")
-local hyjtuk = Instance.new("UICorner")
-local InfoDelete = Instance.new("TextLabel")
+-- StarterGui.ROHub
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Name"] = [[ROHub]];
 
---Properties:
 
-ROHub.Name = "ROHub"
-ROHub.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+-- StarterGui.ROHub.ROHubLabel
+G2L["2"] = Instance.new("TextLabel", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["TextSize"] = 14;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2"]["Size"] = UDim2.new(0, 82, 0, 23);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Text"] = [[ROHub]];
+G2L["2"]["LayoutOrder"] = 1;
+G2L["2"]["Name"] = [[ROHubLabel]];
+G2L["2"]["Position"] = UDim2.new(0.42384, 0, 0.36499, 0);
 
-ROHubLabel.Name = "ROHubLabel"
-ROHubLabel.Parent = ROHub
-ROHubLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ROHubLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ROHubLabel.BorderSizePixel = 0
-ROHubLabel.LayoutOrder = 1
-ROHubLabel.Position = UDim2.new(0.423844934, 0, 0.364992201, 0)
-ROHubLabel.Size = UDim2.new(0, 82, 0, 23)
-ROHubLabel.Font = Enum.Font.SourceSans
-ROHubLabel.Text = "ROHub"
-ROHubLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-ROHubLabel.TextSize = 14.000
 
-ROHubLabelCorner.Name = "ROHubLabelCorner"
-ROHubLabelCorner.Parent = ROHubLabel
+-- StarterGui.ROHub.ROHubLabel.ROHubLabelCorner
+G2L["3"] = Instance.new("UICorner", G2L["2"]);
+G2L["3"]["Name"] = [[ROHubLabelCorner]];
 
-CloseButton.Name = "CloseButton"
-CloseButton.Parent = ROHubLabel
-CloseButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-CloseButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-CloseButton.BorderSizePixel = 0
-CloseButton.Position = UDim2.new(3.3780489, 0, 0, 0)
-CloseButton.Size = UDim2.new(0, 33, 0, 23)
-CloseButton.Font = Enum.Font.SourceSans
-CloseButton.Text = "Hide"
-CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-CloseButton.TextSize = 14.000
 
-CloseCorner.Name = "CloseCorner"
-CloseCorner.Parent = CloseButton
+-- StarterGui.ROHub.ROHubLabel.DraggableGUIScript
+G2L["4"] = Instance.new("LocalScript", G2L["2"]);
+G2L["4"]["Name"] = [[DraggableGUIScript]];
 
-Main.Name = "Main"
-Main.Parent = ROHubLabel
-Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Main.BorderSizePixel = 0
-Main.Position = UDim2.new(0.213859737, 0, 0.355123758, 0)
-Main.Rotation = 90.000
-Main.Size = UDim2.new(0, 278, 0, 315)
 
-WIP.Name = "WIP"
-WIP.Parent = Main
-WIP.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-WIP.BackgroundTransparency = 1.000
-WIP.BorderColor3 = Color3.fromRGB(0, 0, 0)
-WIP.BorderSizePixel = 0
-WIP.Position = UDim2.new(0.517985582, 0, 0.422222227, 0)
-WIP.Rotation = -90.000
-WIP.Size = UDim2.new(0, 200, 0, 50)
-WIP.Font = Enum.Font.SourceSans
-WIP.Text = "This script hub is work in progress"
-WIP.TextColor3 = Color3.fromRGB(0, 0, 0)
-WIP.TextSize = 14.000
+-- StarterGui.ROHub.ROHubLabel.CloseButton
+G2L["5"] = Instance.new("TextButton", G2L["2"]);
+G2L["5"]["BorderSizePixel"] = 0;
+G2L["5"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5"]["TextSize"] = 14;
+G2L["5"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["5"]["Size"] = UDim2.new(0, 33, 0, 23);
+G2L["5"]["Name"] = [[CloseButton]];
+G2L["5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5"]["Text"] = [[Hide]];
+G2L["5"]["Position"] = UDim2.new(3.37805, 0, 0, 0);
 
-FlyGUIButton.Name = "FlyGUIButton"
-FlyGUIButton.Parent = Main
-FlyGUIButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-FlyGUIButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-FlyGUIButton.BorderSizePixel = 0
-FlyGUIButton.Position = UDim2.new(-0.0556897484, 0, 0.807994425, 0)
-FlyGUIButton.Rotation = -90.000
-FlyGUIButton.Size = UDim2.new(0, 74, 0, 30)
-FlyGUIButton.Font = Enum.Font.SourceSans
-FlyGUIButton.Text = "Fly GUI v3"
-FlyGUIButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-FlyGUIButton.TextSize = 14.000
 
-FlyButtonCorner.Name = "FlyButtonCorner"
-FlyButtonCorner.Parent = FlyGUIButton
+-- StarterGui.ROHub.ROHubLabel.CloseButton.CloseCorner
+G2L["6"] = Instance.new("UICorner", G2L["5"]);
+G2L["6"]["Name"] = [[CloseCorner]];
 
-MainGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(0.00, Color3.fromRGB(147, 147, 147)), ColorSequenceKeypoint.new(0.19, Color3.fromRGB(158, 158, 158)), ColorSequenceKeypoint.new(0.46, Color3.fromRGB(157, 157, 157)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
-MainGradient.Name = "MainGradient"
-MainGradient.Parent = Main
 
-MainCorner.Name = "MainCorner"
-MainCorner.Parent = Main
+-- StarterGui.ROHub.ROHubLabel.CloseButton.CloseGUIScript
+G2L["7"] = Instance.new("LocalScript", G2L["5"]);
+G2L["7"]["Name"] = [[CloseGUIScript]];
 
-TouchFlingGUIButton.Name = "TouchFlingGUIButton"
-TouchFlingGUIButton.Parent = Main
-TouchFlingGUIButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-TouchFlingGUIButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TouchFlingGUIButton.BorderSizePixel = 0
-TouchFlingGUIButton.Position = UDim2.new(-0.0458304882, 0, 0.538859844, 0)
-TouchFlingGUIButton.Rotation = -90.000
-TouchFlingGUIButton.Size = UDim2.new(0, 68, 0, 30)
-TouchFlingGUIButton.Font = Enum.Font.SourceSans
-TouchFlingGUIButton.Text = "Touch Fling"
-TouchFlingGUIButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-TouchFlingGUIButton.TextSize = 14.000
 
-TouchFlingCorner.Name = "TouchFlingCorner"
-TouchFlingCorner.Parent = TouchFlingGUIButton
+-- StarterGui.ROHub.ROHubLabel.Main
+G2L["8"] = Instance.new("Frame", G2L["2"]);
+G2L["8"]["BorderSizePixel"] = 0;
+G2L["8"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8"]["Size"] = UDim2.new(0, 278, 0, 315);
+G2L["8"]["Position"] = UDim2.new(0.21386, 0, 0.35512, 0);
+G2L["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8"]["Name"] = [[Main]];
+G2L["8"]["Rotation"] = 90;
 
-GUIDeleteButton.Name = "GUIDeleteButton"
-GUIDeleteButton.Parent = ROHubLabel
-GUIDeleteButton.BackgroundColor3 = Color3.fromRGB(94, 0, 2)
-GUIDeleteButton.BorderColor3 = Color3.fromRGB(255, 0, 4)
-GUIDeleteButton.BorderSizePixel = 0
-GUIDeleteButton.Position = UDim2.new(1.10975611, 0, 0, 0)
-GUIDeleteButton.Size = UDim2.new(0, 38, 0, 23)
-GUIDeleteButton.Font = Enum.Font.SourceSans
-GUIDeleteButton.Text = "Close"
-GUIDeleteButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-GUIDeleteButton.TextSize = 14.000
 
-thryjuk.Name = "thryjuk"
-thryjuk.Parent = GUIDeleteButton
+-- StarterGui.ROHub.ROHubLabel.Main.WIP
+G2L["9"] = Instance.new("TextLabel", G2L["8"]);
+G2L["9"]["BorderSizePixel"] = 0;
+G2L["9"]["TextSize"] = 14;
+G2L["9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["9"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9"]["BackgroundTransparency"] = 1;
+G2L["9"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9"]["Text"] = [[This script hub is work in progress]];
+G2L["9"]["Rotation"] = -90;
+G2L["9"]["Name"] = [[WIP]];
+G2L["9"]["Position"] = UDim2.new(0.51799, 0, 0.42222, 0);
 
-OpenGUIButton.Name = "OpenGUIButton"
-OpenGUIButton.Parent = ROHub
-OpenGUIButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-OpenGUIButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-OpenGUIButton.BorderSizePixel = 0
-OpenGUIButton.Position = UDim2.new(-0.0881542712, 1091, 1.16866267, -842)
-OpenGUIButton.Size = UDim2.new(0, 81, 0, 24)
-OpenGUIButton.Visible = false
-OpenGUIButton.Font = Enum.Font.SourceSans
-OpenGUIButton.Text = "	Open ROHub"
-OpenGUIButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-OpenGUIButton.TextSize = 14.000
-OpenGUIButton.TextXAlignment = Enum.TextXAlignment.Left
 
-OpenCorner.Name = "OpenCorner"
-OpenCorner.Parent = OpenGUIButton
+-- StarterGui.ROHub.ROHubLabel.Main.FlyGUIButton
+G2L["a"] = Instance.new("TextButton", G2L["8"]);
+G2L["a"]["BorderSizePixel"] = 0;
+G2L["a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["a"]["TextSize"] = 14;
+G2L["a"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["a"]["Size"] = UDim2.new(0, 74, 0, 30);
+G2L["a"]["Name"] = [[FlyGUIButton]];
+G2L["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a"]["Text"] = [[Fly GUI v3]];
+G2L["a"]["Rotation"] = -90;
+G2L["a"]["Position"] = UDim2.new(-0.05569, 0, 0.80799, 0);
 
-GUIDeleteConf.Name = "GUIDeleteConf"
-GUIDeleteConf.Parent = ROHub
-GUIDeleteConf.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-GUIDeleteConf.BorderColor3 = Color3.fromRGB(0, 0, 0)
-GUIDeleteConf.BorderSizePixel = 0
-GUIDeleteConf.Position = UDim2.new(0.467630863, 0, 0.457900822, 0)
-GUIDeleteConf.Size = UDim2.new(0, 184, 0, 141)
-GUIDeleteConf.Visible = false
 
-bnh.Name = "bnh"
-bnh.Parent = GUIDeleteConf
+-- StarterGui.ROHub.ROHubLabel.Main.FlyGUIButton.FlyButtonCorner
+G2L["b"] = Instance.new("UICorner", G2L["a"]);
+G2L["b"]["Name"] = [[FlyButtonCorner]];
 
-GUIDelY.Name = "GUIDelY"
-GUIDelY.Parent = GUIDeleteConf
-GUIDelY.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-GUIDelY.BorderColor3 = Color3.fromRGB(0, 255, 0)
-GUIDelY.BorderSizePixel = 0
-GUIDelY.Position = UDim2.new(0.0434782617, 0, 0.68794328, 0)
-GUIDelY.Size = UDim2.new(0, 51, 0, 32)
-GUIDelY.Font = Enum.Font.SourceSans
-GUIDelY.Text = "Yes"
-GUIDelY.TextColor3 = Color3.fromRGB(255, 255, 255)
-GUIDelY.TextSize = 14.000
 
-htjy.Name = "htjy"
-htjy.Parent = GUIDelY
+-- StarterGui.ROHub.ROHubLabel.Main.FlyGUIButton.FlyScript
+G2L["c"] = Instance.new("LocalScript", G2L["a"]);
+G2L["c"]["Name"] = [[FlyScript]];
 
-GUIDelN.Name = "GUIDelN"
-GUIDelN.Parent = GUIDeleteConf
-GUIDelN.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-GUIDelN.BorderColor3 = Color3.fromRGB(0, 0, 0)
-GUIDelN.BorderSizePixel = 0
-GUIDelN.Position = UDim2.new(0.673913062, 0, 0.68794328, 0)
-GUIDelN.Size = UDim2.new(0, 44, 0, 32)
-GUIDelN.Font = Enum.Font.SourceSans
-GUIDelN.Text = "No"
-GUIDelN.TextColor3 = Color3.fromRGB(255, 255, 255)
-GUIDelN.TextSize = 14.000
 
-hyjtuk.Name = "hyjtuk"
-hyjtuk.Parent = GUIDelN
+-- StarterGui.ROHub.ROHubLabel.Main.MainGradient
+G2L["d"] = Instance.new("UIGradient", G2L["8"]);
+G2L["d"]["Name"] = [[MainGradient]];
+G2L["d"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(0.000, Color3.fromRGB(148, 148, 148)),ColorSequenceKeypoint.new(0.187, Color3.fromRGB(159, 159, 159)),ColorSequenceKeypoint.new(0.458, Color3.fromRGB(158, 158, 158)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 255, 255))};
 
-InfoDelete.Name = "InfoDelete"
-InfoDelete.Parent = GUIDeleteConf
-InfoDelete.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-InfoDelete.BorderColor3 = Color3.fromRGB(0, 0, 0)
-InfoDelete.BorderSizePixel = 0
-InfoDelete.Position = UDim2.new(0.103260867, 0, 0.0780141875, 0)
-InfoDelete.Size = UDim2.new(0, 149, 0, 73)
-InfoDelete.Font = Enum.Font.SourceSans
-InfoDelete.Text = "Are you sure? If you click 'Yes', this will completely delete the GUI, so you have to run the script again to get ROHub back."
-InfoDelete.TextColor3 = Color3.fromRGB(0, 0, 0)
-InfoDelete.TextSize = 14.000
-InfoDelete.TextWrapped = true
 
--- Scripts:
+-- StarterGui.ROHub.ROHubLabel.Main.MainCorner
+G2L["e"] = Instance.new("UICorner", G2L["8"]);
+G2L["e"]["Name"] = [[MainCorner]];
 
-local function RSXLLL_fake_script() -- ROHubLabel.DraggableGUIScript 
-	local script = Instance.new('LocalScript', ROHubLabel)
 
+-- StarterGui.ROHub.ROHubLabel.Main.TouchFlingGUIButton
+G2L["f"] = Instance.new("TextButton", G2L["8"]);
+G2L["f"]["BorderSizePixel"] = 0;
+G2L["f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["f"]["TextSize"] = 14;
+G2L["f"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["f"]["Size"] = UDim2.new(0, 68, 0, 30);
+G2L["f"]["Name"] = [[TouchFlingGUIButton]];
+G2L["f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["f"]["Text"] = [[Touch Fling]];
+G2L["f"]["Rotation"] = -90;
+G2L["f"]["Position"] = UDim2.new(-0.04583, 0, 0.53886, 0);
+
+
+-- StarterGui.ROHub.ROHubLabel.Main.TouchFlingGUIButton.TouchFlingCorner
+G2L["10"] = Instance.new("UICorner", G2L["f"]);
+G2L["10"]["Name"] = [[TouchFlingCorner]];
+
+
+-- StarterGui.ROHub.ROHubLabel.Main.TouchFlingGUIButton.TouchFlingScript
+G2L["11"] = Instance.new("LocalScript", G2L["f"]);
+G2L["11"]["Name"] = [[TouchFlingScript]];
+
+
+-- StarterGui.ROHub.ROHubLabel.GUIDeleteButton
+G2L["12"] = Instance.new("TextButton", G2L["2"]);
+G2L["12"]["BorderSizePixel"] = 0;
+G2L["12"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["12"]["TextSize"] = 14;
+G2L["12"]["BackgroundColor3"] = Color3.fromRGB(95, 0, 3);
+G2L["12"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["12"]["Size"] = UDim2.new(0, 38, 0, 23);
+G2L["12"]["Name"] = [[GUIDeleteButton]];
+G2L["12"]["BorderColor3"] = Color3.fromRGB(255, 0, 5);
+G2L["12"]["Text"] = [[Close]];
+G2L["12"]["Position"] = UDim2.new(1.10976, 0, 0, 0);
+
+
+-- StarterGui.ROHub.ROHubLabel.GUIDeleteButton.GUIActivator1
+G2L["13"] = Instance.new("LocalScript", G2L["12"]);
+G2L["13"]["Name"] = [[GUIActivator1]];
+
+
+-- StarterGui.ROHub.ROHubLabel.GUIDeleteButton.thryjuk
+G2L["14"] = Instance.new("UICorner", G2L["12"]);
+G2L["14"]["Name"] = [[thryjuk]];
+
+
+-- StarterGui.ROHub.OpenGUIButton
+G2L["15"] = Instance.new("TextButton", G2L["1"]);
+G2L["15"]["BorderSizePixel"] = 0;
+G2L["15"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["15"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["15"]["TextSize"] = 14;
+G2L["15"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["15"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["15"]["Size"] = UDim2.new(0, 81, 0, 24);
+G2L["15"]["Name"] = [[OpenGUIButton]];
+G2L["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["15"]["Text"] = [[	Open ROHub]];
+G2L["15"]["Visible"] = false;
+G2L["15"]["Position"] = UDim2.new(-0.08815, 1091, 1.16866, -842);
+
+
+-- StarterGui.ROHub.OpenGUIButton.OpenCorner
+G2L["16"] = Instance.new("UICorner", G2L["15"]);
+G2L["16"]["Name"] = [[OpenCorner]];
+
+
+-- StarterGui.ROHub.OpenGUIButton.OpenGUIScript
+G2L["17"] = Instance.new("LocalScript", G2L["15"]);
+G2L["17"]["Name"] = [[OpenGUIScript]];
+
+
+-- StarterGui.ROHub.OpenGUIButton.DraggableGUIScript1
+G2L["18"] = Instance.new("LocalScript", G2L["15"]);
+G2L["18"]["Name"] = [[DraggableGUIScript1]];
+
+
+-- StarterGui.ROHub.Settings
+G2L["19"] = Instance.new("LocalScript", G2L["1"]);
+G2L["19"]["Name"] = [[Settings]];
+
+
+-- StarterGui.ROHub.GUIDeleteConf
+G2L["1a"] = Instance.new("Frame", G2L["1"]);
+G2L["1a"]["Visible"] = false;
+G2L["1a"]["BorderSizePixel"] = 0;
+G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1a"]["Size"] = UDim2.new(0, 184, 0, 141);
+G2L["1a"]["Position"] = UDim2.new(0.46763, 0, 0.4579, 0);
+G2L["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1a"]["Name"] = [[GUIDeleteConf]];
+
+
+-- StarterGui.ROHub.GUIDeleteConf.bnh
+G2L["1b"] = Instance.new("UICorner", G2L["1a"]);
+G2L["1b"]["Name"] = [[bnh]];
+
+
+-- StarterGui.ROHub.GUIDeleteConf.GUIDelY
+G2L["1c"] = Instance.new("TextButton", G2L["1a"]);
+G2L["1c"]["BorderSizePixel"] = 0;
+G2L["1c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1c"]["TextSize"] = 14;
+G2L["1c"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1c"]["Size"] = UDim2.new(0, 51, 0, 32);
+G2L["1c"]["Name"] = [[GUIDelY]];
+G2L["1c"]["BorderColor3"] = Color3.fromRGB(0, 255, 0);
+G2L["1c"]["Text"] = [[Yes]];
+G2L["1c"]["Position"] = UDim2.new(0.04348, 0, 0.68794, 0);
+
+
+-- StarterGui.ROHub.GUIDeleteConf.GUIDelY.htjy
+G2L["1d"] = Instance.new("UICorner", G2L["1c"]);
+G2L["1d"]["Name"] = [[htjy]];
+
+
+-- StarterGui.ROHub.GUIDeleteConf.GUIDelY.YGUIDel
+G2L["1e"] = Instance.new("LocalScript", G2L["1c"]);
+G2L["1e"]["Name"] = [[YGUIDel]];
+
+
+-- StarterGui.ROHub.GUIDeleteConf.GUIDelN
+G2L["1f"] = Instance.new("TextButton", G2L["1a"]);
+G2L["1f"]["BorderSizePixel"] = 0;
+G2L["1f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1f"]["TextSize"] = 14;
+G2L["1f"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1f"]["Size"] = UDim2.new(0, 44, 0, 32);
+G2L["1f"]["Name"] = [[GUIDelN]];
+G2L["1f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1f"]["Text"] = [[No]];
+G2L["1f"]["Position"] = UDim2.new(0.67391, 0, 0.68794, 0);
+
+
+-- StarterGui.ROHub.GUIDeleteConf.GUIDelN.hyjtuk
+G2L["20"] = Instance.new("UICorner", G2L["1f"]);
+G2L["20"]["Name"] = [[hyjtuk]];
+
+
+-- StarterGui.ROHub.GUIDeleteConf.GUIDelN.NoGUIDelScript
+G2L["21"] = Instance.new("LocalScript", G2L["1f"]);
+G2L["21"]["Name"] = [[NoGUIDelScript]];
+
+
+-- StarterGui.ROHub.GUIDeleteConf.InfoDelete
+G2L["22"] = Instance.new("TextLabel", G2L["1a"]);
+G2L["22"]["TextWrapped"] = true;
+G2L["22"]["BorderSizePixel"] = 0;
+G2L["22"]["TextSize"] = 14;
+G2L["22"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["22"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["22"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["22"]["Size"] = UDim2.new(0, 149, 0, 73);
+G2L["22"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["22"]["Text"] = [[Are you sure? If you click 'Yes', this will completely delete the GUI, so you have to run the script again to get ROHub back.]];
+G2L["22"]["Name"] = [[InfoDelete]];
+G2L["22"]["Position"] = UDim2.new(0.10326, 0, 0.07801, 0);
+
+
+-- StarterGui.ROHub.ROHubLabel.DraggableGUIScript
+local function C_4()
+local script = G2L["4"];
 	local UserInputService = game:GetService("UserInputService")
 	
 	local gui = script.Parent
@@ -259,11 +335,11 @@ local function RSXLLL_fake_script() -- ROHubLabel.DraggableGUIScript
 			end
 		end
 	end)
-end
-coroutine.wrap(RSXLLL_fake_script)()
-local function AHXP_fake_script() -- CloseButton.CloseGUIScript 
-	local script = Instance.new('LocalScript', CloseButton)
-
+end;
+task.spawn(C_4);
+-- StarterGui.ROHub.ROHubLabel.CloseButton.CloseGUIScript
+local function C_7()
+local script = G2L["7"];
 	local LocalPlayer = game.Players.LocalPlayer
 	local CloseButton = script.Parent
 	local ROHubMain = script.Parent.Parent
@@ -274,11 +350,11 @@ local function AHXP_fake_script() -- CloseButton.CloseGUIScript
 		ROHubOpen.Visible = true
 	end)
 	
-end
-coroutine.wrap(AHXP_fake_script)()
-local function ZWOPJJ_fake_script() -- FlyGUIButton.FlyScript 
-	local script = Instance.new('LocalScript', FlyGUIButton)
-
+end;
+task.spawn(C_7);
+-- StarterGui.ROHub.ROHubLabel.Main.FlyGUIButton.FlyScript
+local function C_c()
+local script = G2L["c"];
 	local Button = script.Parent
 	
 	Button.MouseButton1Click:Connect(function()
@@ -806,11 +882,11 @@ local function ZWOPJJ_fake_script() -- FlyGUIButton.FlyScript
 		end)
 	end)
 	
-end
-coroutine.wrap(ZWOPJJ_fake_script)()
-local function IXLORT_fake_script() -- TouchFlingGUIButton.TouchFlingScript 
-	local script = Instance.new('LocalScript', TouchFlingGUIButton)
-
+end;
+task.spawn(C_c);
+-- StarterGui.ROHub.ROHubLabel.Main.TouchFlingGUIButton.TouchFlingScript
+local function C_11()
+local script = G2L["11"];
 	local Button = script.Parent
 	
 	Button.MouseButton1Click:Connect(function()
@@ -943,11 +1019,11 @@ local function IXLORT_fake_script() -- TouchFlingGUIButton.TouchFlingScript
 	coroutine.wrap(FFJFK_fake_script)()
 	
 	end)
-end
-coroutine.wrap(IXLORT_fake_script)()
-local function NOIVJ_fake_script() -- GUIDeleteButton.GUIActivator1 
-	local script = Instance.new('LocalScript', GUIDeleteButton)
-
+end;
+task.spawn(C_11);
+-- StarterGui.ROHub.ROHubLabel.GUIDeleteButton.GUIActivator1
+local function C_13()
+local script = G2L["13"];
 	local Button = script.Parent
 	local GUIDelConf = script.Parent.Parent.Parent.GUIDeleteConf
 	local Board = script.Parent.Parent.Parent.ROHubLabel
@@ -956,11 +1032,11 @@ local function NOIVJ_fake_script() -- GUIDeleteButton.GUIActivator1
 		GUIDelConf.Visible = true
 		Board.Visible = false
 	end)
-end
-coroutine.wrap(NOIVJ_fake_script)()
-local function OPFGXJ_fake_script() -- OpenGUIButton.OpenGUIScript 
-	local script = Instance.new('LocalScript', OpenGUIButton)
-
+end;
+task.spawn(C_13);
+-- StarterGui.ROHub.OpenGUIButton.OpenGUIScript
+local function C_17()
+local script = G2L["17"];
 	local OpenGUIButton = script.Parent
 	local ROHubMain = script.Parent.Parent.ROHubLabel
 	
@@ -969,11 +1045,11 @@ local function OPFGXJ_fake_script() -- OpenGUIButton.OpenGUIScript
 		OpenGUIButton.Visible = false
 	end)
 	
-end
-coroutine.wrap(OPFGXJ_fake_script)()
-local function HPDN_fake_script() -- OpenGUIButton.DraggableGUIScript1 
-	local script = Instance.new('LocalScript', OpenGUIButton)
-
+end;
+task.spawn(C_17);
+-- StarterGui.ROHub.OpenGUIButton.DraggableGUIScript1
+local function C_18()
+local script = G2L["18"];
 	local UserInputService = game:GetService("UserInputService")
 	
 	local gui = script.Parent
@@ -1015,37 +1091,17 @@ local function HPDN_fake_script() -- OpenGUIButton.DraggableGUIScript1
 			end
 		end
 	end)
-end
-coroutine.wrap(HPDN_fake_script)()
-local function LHLRHX_fake_script() -- ROHub.Settings 
-	local script = Instance.new('LocalScript', ROHub)
-
+end;
+task.spawn(C_18);
+-- StarterGui.ROHub.Settings
+local function C_19()
+local script = G2L["19"];
 	script.Parent.ResetOnSpawn = false
-	
-	-- Exploit Workspace File Support
-	
-	local CustomFunctionSupport = isfile and isfolder and writefile and readfile and listfiles
-	local FileSupport = isfile and isfolder and writefile and readfile
-	
-	if FileSupport then
-		if not isfolder('ROHub') then
-			makefolder('ROHub')
-		end
-		
-		if not isfolder ("ROHub/Settings")
-			makefolder('ROHub/Settings")
-	end
-	
-	if not isfile("ROHub/Settings/Information.txt") then
-		writefile("ROHub/Settings/Information.txt", 'Welcome to ROHub. The folder setting and read creation is WIP.')
-	else
-	end
-	end
-end
-coroutine.wrap(LHLRHX_fake_script)()
-local function GTEOAW_fake_script() -- GUIDelY.YGUIDel 
-	local script = Instance.new('LocalScript', GUIDelY)
-
+end;
+task.spawn(C_19);
+-- StarterGui.ROHub.GUIDeleteConf.GUIDelY.YGUIDel
+local function C_1e()
+local script = G2L["1e"];
 	local GUIDelConf = script.Parent.Parent
 	local Button = script.Parent
 	local Board = script.Parent.Parent.Parent.ROHubLabel
@@ -1058,11 +1114,11 @@ local function GTEOAW_fake_script() -- GUIDelY.YGUIDel
 	end)
 	
 	
-end
-coroutine.wrap(GTEOAW_fake_script)()
-local function MJIQ_fake_script() -- GUIDelN.NoGUIDelScript 
-	local script = Instance.new('LocalScript', GUIDelN)
-
+end;
+task.spawn(C_1e);
+-- StarterGui.ROHub.GUIDeleteConf.GUIDelN.NoGUIDelScript
+local function C_21()
+local script = G2L["21"];
 	local GUIDelConf = script.Parent.Parent
 	local Button = script.Parent
 	local Board = script.Parent.Parent.Parent.ROHubLabel
@@ -1073,5 +1129,7 @@ local function MJIQ_fake_script() -- GUIDelN.NoGUIDelScript
 	end)
 	
 	
-end
-coroutine.wrap(MJIQ_fake_script)()
+end;
+task.spawn(C_21);
+
+return G2L["1"], require;
