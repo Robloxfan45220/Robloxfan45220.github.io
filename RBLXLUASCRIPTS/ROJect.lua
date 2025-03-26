@@ -1,7 +1,9 @@
-pcall(function() game.CoreGui["ROJect"]:Destroy() end)
+
+
+pcall(function() game.CoreGui.ROJect:Destroy() end)
 
 local ROJect = Instance.new("ScreenGui")
-local MainFrame = Instance.new("Frame")
+local Master = Instance.new("Frame")
 local bar = Instance.new("Frame")
 local Close = Instance.new("TextButton")
 local Mini = Instance.new("TextButton")
@@ -32,7 +34,7 @@ local bar_2 = Instance.new("Frame")
 local select = Instance.new("Frame")
 local dex = Instance.new("TextButton")
 local esp = Instance.new("TextButton")
-local spy = Instance.new("TextButton")
+local ROHub = Instance.new("TextButton")
 local dumper = Instance.new("TextButton")
 local backdoor = Instance.new("TextButton")
 local desc = Instance.new("Frame")
@@ -58,17 +60,17 @@ ROJect.Name = "ROJect"
 ROJect.Parent = game.CoreGui
 ROJect.ResetOnSpawn = false
 
-MainFrame.Name = "MainFrame"
-MainFrame.Parent = ROJect
-MainFrame.Active = true
-MainFrame.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
-MainFrame.BorderSizePixel = 0
-MainFrame.Position = UDim2.new(0.0543109924, 0, 0.103222892, 0)
-MainFrame.Size = UDim2.new(0, 689, 0, 320)
-MainFrame.Visible = true
+Master.Name = "Master"
+Master.Parent = ROJect
+Master.Active = true
+Master.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Master.BorderSizePixel = 0
+Master.Position = UDim2.new(0.0543109924, 0, 0.103222892, 0)
+Master.Size = UDim2.new(0, 689, 0, 320)
+Master.Visible = true
 
 bar.Name = "bar"
-bar.Parent = MainFrame
+bar.Parent = Master
 bar.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
 bar.BackgroundTransparency = 0.800
 bar.BorderSizePixel = 0
@@ -86,7 +88,7 @@ synminbutt.ZIndex = 14
 synminbutt.Image = "http://www.roblox.com/asset/?id=125244948372124"
 synminbutt.ImageRectSize = Vector2.new(138, 167)
 synminbutt.MouseButton1Click:Connect(function()
-	MainFrame.Visible = true
+	Master.Visible = true
 	synminbutt.Visible = false
 end)
 
@@ -125,7 +127,7 @@ Mini.MouseButton1Click:Connect(function()
 		Duration = 2;
 	})
 	synminbutt.Visible = true
-	MainFrame.Visible = false
+	Master.Visible = false
 end)
 
 Min.Name = "Min"
@@ -146,11 +148,11 @@ Min.MouseButton1Click:Connect(function()
 		Text = "ROJect Hidden. | Press F6 to show.";
 		Duration = 2;
 	})
-	MainFrame.Visible = false
+	Master.Visible = false
 	synminbutt.Visible = false
 end)
 
-ImageLabel.Parent = MainFrame
+ImageLabel.Parent = Master
 ImageLabel.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
 ImageLabel.BorderSizePixel = 0
 ImageLabel.Position = UDim2.new(0.0252733715, 0, 0.015625, 39)
@@ -318,7 +320,7 @@ Lines.TextSize = 15.000
 Lines.TextYAlignment = Enum.TextYAlignment.Top
 
 title.Name = "title"
-title.Parent = MainFrame
+title.Parent = Master
 title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 title.BackgroundTransparency = 1.000
 title.Position = UDim2.new(0.330062926, 0, 0.00625000056, 0)
@@ -329,14 +331,14 @@ title.TextColor3 = Color3.fromRGB(255, 255, 255)
 title.TextSize = 16.000
 
 list.Name = "list"
-list.Parent = MainFrame
+list.Parent = Master
 list.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
 list.BorderSizePixel = 0
 list.Position = UDim2.new(0.820970535, 0, 0.100000001, 0)
 list.Size = UDim2.new(0, 114, 0, 246)
 
 execute.Name = "execute"
-execute.Parent = MainFrame
+execute.Parent = Master
 execute.BackgroundColor3 = Color3.fromRGB(104, 104, 104)
 execute.BackgroundTransparency = 0.800
 execute.BorderSizePixel = 0
@@ -356,7 +358,7 @@ execute.MouseButton1Click:Connect(function()
 end)
 
 clear.Name = "clear"
-clear.Parent = MainFrame
+clear.Parent = Master
 clear.BackgroundColor3 = Color3.fromRGB(104, 104, 104)
 clear.BackgroundTransparency = 0.800
 clear.BorderSizePixel = 0
@@ -371,7 +373,7 @@ clear.MouseButton1Click:Connect(function()
 end)
 
 options.Name = "options"
-options.Parent = MainFrame
+options.Parent = Master
 options.BackgroundColor3 = Color3.fromRGB(104, 104, 104)
 options.BackgroundTransparency = 0.800
 options.BorderSizePixel = 0
@@ -390,7 +392,7 @@ options.MouseButton1Click:Connect(function()
 end)
 
 scripthub.Name = "scripthub"
-scripthub.Parent = MainFrame
+scripthub.Parent = Master
 scripthub.BackgroundColor3 = Color3.fromRGB(104, 104, 104)
 scripthub.BackgroundTransparency = 0.800
 scripthub.BorderSizePixel = 0
@@ -409,7 +411,7 @@ scripthub.MouseButton1Click:Connect(function()
 end)
 
 Attach.Name = "Attach"
-Attach.Parent = MainFrame
+Attach.Parent = Master
 Attach.BackgroundColor3 = Color3.fromRGB(104, 104, 104)
 Attach.BackgroundTransparency = 0.800
 Attach.BorderSizePixel = 0
@@ -447,7 +449,7 @@ Attach.MouseButton1Click:Connect(function()
 end)
 
 title_2.Name = "title"
-title_2.Parent = MainFrame
+title_2.Parent = Master
 title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 title_2.BackgroundTransparency = 1.000
 title_2.Position = UDim2.new(0.00870821718, 0, 0, 0)
@@ -732,9 +734,9 @@ UICorner.Parent = ROJect
 -- Scripts:
 
 game:GetService("UserInputService").InputBegan:Connect(function (input)
-	if MainFrame.Visible == false and synminbutt.Visible == false then
+	if Master.Visible == false and synminbutt.Visible == false then
 		if (input.KeyCode == Enum.KeyCode.F6) then
-			MainFrame.Visible = not MainFrame.Visible
+			Master.Visible = not Master.Visible
 		end
 	end
 end)
@@ -916,8 +918,8 @@ local function SYHNK_fake_script() -- ImageLabel.LocalScript
 	end)
 end
 coroutine.wrap(SYHNK_fake_script)()
-local function AMNA_fake_script() -- MainFrame.Dragging 
-	local script = Instance.new('LocalScript', MainFrame)
+local function AMNA_fake_script() -- Master.Dragging 
+	local script = Instance.new('LocalScript', Master)
 
 	local UserInputService = game:GetService("UserInputService")
 
